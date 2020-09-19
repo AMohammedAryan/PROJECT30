@@ -27,12 +27,13 @@ class Block{
         rect(0, 0, this.width, this.height);
         pop();
     }
-    else{
-      this.Visibility = this.Visibility - 10;
-    }
-
-    if(this.Visibility < 1){
+    else {
       World.remove(world, this.body);
+
+      tint(255, this.Visibilty);
+      this.Visibility = this.Visibility - 5;
+
+      rect(this.body.position.x, this.body.position.y, this.width, this.height);
     }
   }
 }
