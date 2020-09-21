@@ -29,9 +29,10 @@ class Block{
     }
     else {
       World.remove(world, this.body);
+      
+      this.Visibility = this.Visibility - 5;
 
       tint(255, this.Visibilty);
-      this.Visibility = this.Visibility - 5;
 
       rect(this.body.position.x, this.body.position.y, this.width, this.height);
     }
